@@ -1,5 +1,5 @@
-const {BFG_CANVAS_TEST} = require('../../../../key.js');
-const URL = userId => `${BFG_CANVAS_TEST}/api/v1/users/${userId}/courses`;
+const {CLIENT_CANVAS_TEST} = require('../../../credentials.js');
+const URL = userId => `${CLIENT_CANVAS_TEST}/api/v1/users/${userId}/courses`;
 
 const Courses = ({ axios }) => ({
   get: async (req, res) => {

@@ -1,5 +1,5 @@
-const {BFG_CANVAS_TEST} = require('../../../../key.js');
-const URL = userId => `${BFG_CANVAS_TEST}/api/v1/users/${userId}/profile`;
+const {CLIENT_CANVAS_TEST} = require('../../../credentials.js');
+const URL = userId => `${CLIENT_CANVAS_TEST}/api/v1/users/${userId}/profile`;
 
 const User = ({ axios }) => ({
   getProfile: async (req, res) => {
@@ -8,7 +8,6 @@ const User = ({ axios }) => ({
     const headers = {
       Authorization: "Bearer " + token
     };
-    console.log("headres", headers);
     const response = await axios.get(URL(userId), {
       headers
     });
